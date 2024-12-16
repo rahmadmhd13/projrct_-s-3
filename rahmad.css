@@ -1,0 +1,185 @@
+/* Mengatur gaya umum untuk body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('100.jpg'); /* Gambar latar belakang */
+    background-size: cover; /* Membuat gambar menutupi seluruh latar belakang */
+    background-position: center center; /* Menempatkan gambar di tengah */
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Gaya untuk heading h1 */
+h1 {
+    margin-top: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.885);
+}
+
+/* Gaya untuk form */
+form {
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 1, 1, 0.921);
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgb(87, 5, 210);
+}
+
+/* Gaya untuk label */
+label {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk input teks */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Gaya untuk tombol submit */
+button {
+    background: #fff;
+    color: #ff0000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(234, 27, 27, 0.851);
+}
+
+button:hover {
+    background: #ff0000;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.994);
+}
+
+/* Gaya untuk h2 */
+h2 {
+    margin-top: 20px;
+    font-size: 1.8em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Gaya untuk div */
+div {
+    font-size: 1.2em;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgb(255, 252, 252);
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Gaya untuk pesan error */
+.error {
+    color: #ff1900;
+    font-weight: bold;
+    box-shadow:13 5 7px #22ff00
+}
+
+/* Gaya untuk pesan error khusus */
+.error-msg  {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    background:#ffffff;
+}
+
+/* Gaya untuk pesan valid */
+.valid {
+    color: hsl(0, 0%, 100%);
+    font-weight: bold;
+}
+
+.valid-msg {
+    color: #ffffff;
+    font-weight: bold;
+    background: rgb(255, 0, 0);
+}
+
+/* Tombol Kembali */
+.back-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #007BFF; /* Warna latar biru */
+    color: white; /* Warna teks putih */
+    padding: 12px 25px; /* Padding lebih besar */
+    border-radius: 8px; /* Sudut lebih melengkung */
+    margin-top: 30px; /* Jarak lebih jauh dari elemen sebelumnya */
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em; /* Ukuran teks lebih besar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Bayangan tombol */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease-in-out;
+}
+
+/* Efek hover untuk tombol kembali */
+.back-button:hover {
+    background-color: #0056b3; /* Warna lebih gelap saat hover */
+    transform: scale(1.1); /* Sedikit memperbesar tombol saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Bayangan lebih besar saat hover */
+}
+
+/* Efek focus (ketika tombol diklik) */
+.back-button:focus {
+    outline: none; /* Menghilangkan outline default */
+    box-shadow: 0 0 8px 2px rgba(0, 123, 255, 0.8); /* Fokus dengan efek glow biru */
+}
+
+/* Container untuk tautan media sosial */
+.social-links {
+    display: flex; /* Menyusun tautan secara horizontal */
+    justify-content: center; /* Memusatkan semua tautan secara horizontal */
+    gap: 20px; /* Menambahkan jarak antar tautan */
+    margin: 20px auto; /* Tambahkan margin untuk jarak antar elemen */
+    text-align: center;
+}
+
+/* Gaya untuk masing-masing tautan */
+.social-link {
+    display: inline-block; /* Membuat tautan tampil seperti tombol */
+    background-color: #007BFF; /* Warna latar biru */
+    color: white; /* Warna teks putih */
+    text-decoration: none; /* Hilangkan garis bawah */
+    padding: 10px 20px; /* Ruang dalam tombol */
+    font-size: 1rem; /* Ukuran teks */
+    border-radius: 4px; /* Sudut melengkung */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efek transisi lembut */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan untuk efek tombol */
+}
+
+/* Efek hover untuk tautan */
+.social-link:hover {
+    background-color: #0056b3; /* Warna biru lebih gelap saat hover */
+    transform: scale(1.05); /* Sedikit memperbesar tombol saat hover */
+}
+
+/* Gaya untuk label di dalam tautan */
+.social-link label {
+    cursor: pointer; /* Ubah kursor menjadi tangan saat diarahkan */
+    font-weight: bold; /* Teks tebal untuk tombol */
+}

@@ -1,94 +1,126 @@
-/* Gaya umum untuk body */
+/* Mengatur gaya umum untuk body */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: url('100.jpg'); /* Gambar latar belakang */
-    background-size: cover;
-    background-position: center center;
-    color: #ffffff;
+    font-family: Arial, sans-serif; /* Menggunakan font Arial, fallback ke sans-serif */
+    margin: 0; /* Menghilangkan margin default */
+    padding: 0; /* Menghilangkan padding default */
+    display: flex; /* Menggunakan flexbox untuk layout fleksibel */
+    flex-direction: column; /* Menyusun elemen secara vertikal (kolom) */
+    justify-content: center; /* Memusatkan konten secara vertikal */
+    align-items: center; /* Memusatkan konten secara horizontal */
+    height: 100vh; /* Mengatur tinggi body menjadi 100% tinggi viewport */
+    background-image: url('freefire.jpeg'); /* Gambar latar belakang */
+    background-size: cover; /* Menutup seluruh halaman tanpa distorsi */
+    background-position: center; /* Memusatkan gambar latar */
+}
+
+/* Gaya untuk heading h1 */
+h1 {
+    text-align: center; /* Memusatkan teks heading */
+    background-color: #1f06fe; /* Warna latar belakang biru */
+    color: rgb(255, 255, 255); /* Warna teks putih */
+    font-size: 40px; /* Ukuran teks besar */
+    margin-bottom: 20px; /* Jarak luar bawah heading */
+}
+
+/* Gaya untuk form */
+form {
+    background-color: hwb(0 100% 0%); /* Warna latar belakang putih menggunakan format HWB */
+    border-radius: 10px; /* Sudut form melengkung */
+    box-shadow: 0 0 15px #b67e05eb; /* Bayangan di sekitar form */
+    padding: 15px; /* Jarak dalam form */
+    width: 300px; /* Lebar form */
+    margin-bottom: 20px; /* Jarak luar bawah form */
+    margin-top: 13px; /* Jarak luar atas form */
+}
+
+/* Gaya untuk label */
+label {
+    font-size: 14px; /* Ukuran font label */
+    color: #3b1d00; /* Warna teks coklat tua */
+}
+
+/* Gaya untuk input teks dan password */
+input[type="text"], input[type="password"] {
+    width: 100%; /* Lebar input 100% dari elemen induk */
+    padding: 10px; /* Jarak dalam */
+    margin: 10px 0; /* Jarak luar vertikal */
+    border-radius: 5px; /* Sudut input melengkung */
+    border: 1px solid #190d0d; /* Garis tepi coklat gelap */
+    box-sizing: border-box; /* Menghitung ukuran elemen termasuk padding dan border */
+}
+
+/* Gaya untuk input checkbox */
+input[type="checkbox"] {
+    border: none; /* Menghilangkan garis tepi */
+    background-color: #45a049; /* Warna latar belakang hijau */
+}
+
+/* Gaya untuk tombol submit */
+input[type="submit"] {
+    width: 100%; /* Lebar tombol submit 100% */
+    background-color: rgb(25, 73, 247); /* Warna latar belakang biru */
+    color: rgb(255, 255, 255); /* Warna teks putih */
+    padding: 10px; /* Jarak dalam */
+    margin: 10px 0; /* Jarak luar vertikal */
+    border: none; /* Menghilangkan garis tepi */
+    border-radius: 5px; /* Sudut tombol melengkung */
+    font-size: 16px; /* Ukuran teks tombol */
+}
+
+/* Gaya tombol submit saat hover */
+input[type="submit"]:hover {
+    background-color: #45a049; /* Ubah warna menjadi hijau saat di-hover */
+}
+
+/* Container untuk tautan media sosial */
+.social-links {
+    display: flex; /* Menyusun tautan secara horizontal */
+    justify-content: center; /* Memusatkan semua tautan secara horizontal */
+    gap: 20px; /* Menambahkan jarak antar tautan */
+    margin: 20px auto; /* Tambahkan margin untuk jarak antar elemen */
     text-align: center;
 }
 
-/* Gaya untuk header */
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-}
-
-/* Container untuk logo dan menu */
-.container {
-    display: flex;
-    flex-direction: column; /* Susun logo dan nama situs secara vertikal */
-    justify-content: center; /* Memusatkan konten secara vertikal */
-    align-items: center; /* Memusatkan konten secara horizontal */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Memusatkan logo dan teks di dalam logo-container */
-.logo-container {
-    text-align: center; /* Memusatkan logo dan teks */
-}
-
-/* CSS untuk memusatkan teks di dalam .site-name */
-.site-name {
-    display: block; /* Membuat elemen span menjadi block-level */
-    text-align: center; /* Memusatkan teks di dalam elemen */
-    margin: 0 auto; /* Menjaga elemen tetap di tengah jika ada batas lebar */
-    font-size: 24px; /* Opsional: Mengatur ukuran font */
-}
-
-/* Gaya untuk menu navigasi */
-nav.menu {
-    display: flex;
-    flex-direction: row; /* Susun tombol menu secara horizontal */
-    gap: 20px;
-    justify-content: center; /* Memusatkan menu secara horizontal */
-    width: 100%;
-    margin-top: 20px; /* Memberikan jarak antara logo dan menu */
-}
-
-/* Gaya untuk tombol menu */
-nav.menu a {
-    text-decoration: none; /* Hilangkan garis bawah pada link */
-}
-
-nav.menu button {
+/* Gaya untuk masing-masing tautan */
+.social-link {
+    display: inline-block; /* Membuat tautan tampil seperti tombol */
     background-color: #007BFF; /* Warna latar biru */
     color: white; /* Warna teks putih */
-    border: none;
-    padding: 12px 25px; /* Padding tombol */
-    border-radius: 8px; /* Sudut lebih melengkung */
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* Efek transisi */
+    text-decoration: none; /* Hilangkan garis bawah */
+    padding: 10px 20px; /* Ruang dalam tombol */
+    font-size: 1rem; /* Ukuran teks */
+    border-radius: 4px; /* Sudut melengkung */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efek transisi lembut */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan untuk efek tombol */
 }
 
-/* Efek hover untuk tombol */
-nav.menu button:hover {
-    background-color: #0056b3; /* Warna lebih gelap saat hover */
+/* Efek hover untuk tautan */
+.social-link:hover {
+    background-color: #0056b3; /* Warna biru lebih gelap saat hover */
     transform: scale(1.05); /* Sedikit memperbesar tombol saat hover */
 }
 
-/* Responsif untuk layar kecil */
-@media screen and (max-width: 768px) {
-    /* Untuk kontainer, atur tata letak elemen secara vertikal */
-    .container {
-        flex-direction: column; /* Susun logo, nama, dan menu secara vertikal */
-        text-align: center; /* Pastikan semua elemen terpusat */
-    }
+/* Gaya untuk label di dalam tautan */
+.social-link label {
+    cursor: pointer; /* Ubah kursor menjadi tangan saat diarahkan */
+    font-weight: bold; /* Teks tebal untuk tombol */
+}
 
-    /* Untuk menu, tampilkan dalam format kolom */
-    nav.menu {
-        flex-direction: column; /* Menu menjadi kolom pada layar kecil */
-        gap: 10px; /* Jarak antar tombol menu */
-    }
+/* Tombol Kembali */
+.back-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 30px; /* Tambahkan sedikit jarak dari elemen atas */
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
 
-    /* Tombol menu menjadi lebar penuh di layar kecil */
-    nav.menu button {
-        width: 100%; /* Tombol menu lebar penuh */
-    }
+/* Efek hover untuk tombol kembali */
+.back-button:hover {
+    background-color: #0056b3;
 }
