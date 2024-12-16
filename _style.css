@@ -1,0 +1,99 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('01.jpeg'); /* Ganti dengan path gambar yang valid */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Kalkulator container */
+.calculator {
+    background: #333;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Heading */
+h3 {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* Input fields */
+input[type="text"],
+select {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    background-color: #444;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* Submit button */
+input[type="submit"] {
+    background-color: #2b00ff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    border: none;
+    padding: 15px;
+    font-size: 1em;
+}
+
+input[type="submit"]:hover {
+    background-color: #ffe20a;
+}
+
+/* Navigation button styles */
+.navigation-button {
+    margin-top: 20px;
+}
+
+.btn-link {
+    background-color: #007BFF; /* Blue color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none; /* Remove underline */
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.btn-link:hover {
+    background-color: #0056b3; /* Darker blue */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .calculator {
+        width: 90%; /* 90% width on smaller screens */
+        padding: 15px;
+    }
+    
+    input[type="text"], select, input[type="submit"] {
+        font-size: 1em; /* Adjust font size for small screens */
+    }
+}
