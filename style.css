@@ -1,0 +1,94 @@
+/* Gaya umum untuk body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('100.jpg'); /* Gambar latar belakang */
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Gaya untuk header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Container untuk logo dan menu */
+.container {
+    display: flex;
+    flex-direction: column; /* Susun logo dan nama situs secara vertikal */
+    justify-content: center; /* Memusatkan konten secara vertikal */
+    align-items: center; /* Memusatkan konten secara horizontal */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Memusatkan logo dan teks di dalam logo-container */
+.logo-container {
+    text-align: center; /* Memusatkan logo dan teks */
+}
+
+/* CSS untuk memusatkan teks di dalam .site-name */
+.site-name {
+    display: block; /* Membuat elemen span menjadi block-level */
+    text-align: center; /* Memusatkan teks di dalam elemen */
+    margin: 0 auto; /* Menjaga elemen tetap di tengah jika ada batas lebar */
+    font-size: 24px; /* Opsional: Mengatur ukuran font */
+}
+
+/* Gaya untuk menu navigasi */
+nav.menu {
+    display: flex;
+    flex-direction: row; /* Susun tombol menu secara horizontal */
+    gap: 20px;
+    justify-content: center; /* Memusatkan menu secara horizontal */
+    width: 100%;
+    margin-top: 20px; /* Memberikan jarak antara logo dan menu */
+}
+
+/* Gaya untuk tombol menu */
+nav.menu a {
+    text-decoration: none; /* Hilangkan garis bawah pada link */
+}
+
+nav.menu button {
+    background-color: #007BFF; /* Warna latar biru */
+    color: white; /* Warna teks putih */
+    border: none;
+    padding: 12px 25px; /* Padding tombol */
+    border-radius: 8px; /* Sudut lebih melengkung */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Efek transisi */
+}
+
+/* Efek hover untuk tombol */
+nav.menu button:hover {
+    background-color: #0056b3; /* Warna lebih gelap saat hover */
+    transform: scale(1.05); /* Sedikit memperbesar tombol saat hover */
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+    /* Untuk kontainer, atur tata letak elemen secara vertikal */
+    .container {
+        flex-direction: column; /* Susun logo, nama, dan menu secara vertikal */
+        text-align: center; /* Pastikan semua elemen terpusat */
+    }
+
+    /* Untuk menu, tampilkan dalam format kolom */
+    nav.menu {
+        flex-direction: column; /* Menu menjadi kolom pada layar kecil */
+        gap: 10px; /* Jarak antar tombol menu */
+    }
+
+    /* Tombol menu menjadi lebar penuh di layar kecil */
+    nav.menu button {
+        width: 100%; /* Tombol menu lebar penuh */
+    }
+}
